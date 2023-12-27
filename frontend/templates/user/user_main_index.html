@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../../static/user/user_main_style.css" />
+    </head>
+    <body>
+        <div class="screen">
+            <div class="div">
+                {% if user_authorized %}
+                    <form method="POST" id="exit_form" action="{{form_action_url}}">
+                        <button name="exit" id="exit" class="overlap"><div class="text-wrapper">Выйти</div></button>
+                    </form>
+                {% else %}
+                    <form method="POST" id="login_form" action="{{form_action_url}}">
+                        <button name="login" id="login" class="overlap">
+                            <div class="text-wrapper">Авторизация</div>
+                        </button>
+                    </form>
+                {% endif %}
+
+                <div class="overlap-group">
+                    <a href={{discussions_url}} class="div-wrapper"><div class="text-wrapper-2">Обсуждения</div></a>
+                    <a href={{knowledge_url}} class="overlap-2"><div class="text-wrapper-3">Каталог знаний</div></a>
+                </div>
+                <div class="text-wrapper-4">ITCollaborate</div>
+                <img class="pngwing" src="../../static/img/main_window_png_1.png" />
+            </div>
+        </div>
+    </body>
+</html>

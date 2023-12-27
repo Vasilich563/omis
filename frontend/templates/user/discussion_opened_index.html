@@ -1,0 +1,69 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../static/user/discussion_opened_style.css">
+</head>
+<body>
+    <div class="screen" style="">
+        <div class="div">
+
+            <div class="text-wrapper-4" style="">ITCollaborate</div>
+
+            {% if user_authorized %}
+                <form method="POST" id="exit_form" action="{{form_action_url}}" style="">
+                    <button name="exit" id="exit" class="overlap">
+                        <div class="text-wrapper">Выйти</div>
+                    </button>
+                </form>
+            {% else %}
+                <form method="POST" id="login_form" action="{{form_action_url}}" style="">
+                    <button name="login" id="login" class="overlap">
+                        <div class="text-wrapper">Авторизация</div>
+                    </button>
+                </form>
+            {% endif %}
+
+            <div class="overlap-group" style="">
+                <a href={{discussions_url}} class="div-wrapper" style="background-color: #666666"><div class="text-wrapper-2">Обсуждения</div></a>
+                <a href={{knowledge_url}} class="overlap-2"><div class="text-wrapper-3">Каталог знаний</div></a>
+            </div>
+
+            <div class="overlap-3">
+                <div class="text-wrapper-5">Автор: {{sender_username}}</div>
+                <div class="p" style="margin-bottom: 9px;font-weight: 500;">{{discussion_title}}</div>
+                <div class="c">
+                    {{discussion_description}}
+                </div>
+            </div>
+
+            {% if user_authorized %}
+                <form method="POST" id="add_comment_form" action="{{form_action_url}}">
+                    <div class="comment-box">
+                        <textarea
+                                name="comment_description" id="comment_description" rows="3"
+                                placeholder="Оставьте ваш комментарий" style="min-height: 90px" required
+                        ></textarea>
+                        <button name="add_comment" id="add_comment" class="text-wrapper-6">Комментировать</button>
+                    </div>
+                </form>
+            {% endif %}
+
+            <div class="text-wrapper-8">Комментарии</div>
+            {% if comments %}
+                {% for comment in comments %}
+                    <div class="overlap-group-2" style="">
+                        <div class="text-wrapper-9">
+                            {{comment["sender_username"]}}
+                        </div>
+                        <p class="c-try-catch-try">
+                            {{comment["description"]}}
+                        </p>
+                    </div>
+                    {% endfor %}
+            {% else %}
+                    <div style="padding-top: 10px ">Комментарии не найдены.</div>
+            {% endif %}
+        </div>
+    </div>
+
+
+</body></html>

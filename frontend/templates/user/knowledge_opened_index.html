@@ -1,0 +1,41 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../static/user/knowledge_opened_style.css">
+</head>
+<body>
+    <div class="screen" style="">
+        <div class="div">
+
+            <div class="text-wrapper-4" style="">ITCollaborate</div>
+
+            {% if user_authorized %}
+                <form method="POST" id="exit_form" action="{{form_action_url}}" style="">
+                    <button name="exit" id="exit" class="overlap"><div class="text-wrapper">Выйти</div></button>
+                </form>
+            {% else %}
+                <form method="POST" id="login_form" action="{{form_action_url}}" style="">
+                    <button name="login" id="login" class="overlap"><div class="text-wrapper">Авторизация</div></button>
+                </form>
+            {% endif %}
+
+            <div class="overlap-group" style="">
+                <a href={{discussions_url}} class="div-wrapper"><div class="text-wrapper-2">Обсуждения</div></a>
+                <a href={{knowledge_url}} class="overlap-2" style="background-color: #666666"><div class="text-wrapper-3">Каталог знаний</div></a>
+            </div>
+
+            <div class="overlap-3">
+                <div class="text-wrapper-5">Опубликовал: {{sender_username}}</div>
+                <div class="p" style="margin-bottom: 9px;font-weight: 500;">{{knowledge_title}}</div>
+                <div class="c">
+                    {{knowledge_description}}
+                </div>
+                <div style="margin-top: 9px; margin-bottom: 9px; font-weight: 600;">Ссылка на материал:
+                    <a href="{{knowledge_link}}" style="font-weight: 600;">{{knowledge_link}}</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body></html>

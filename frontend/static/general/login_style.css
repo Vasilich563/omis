@@ -1,0 +1,130 @@
+.screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.screen .overlap {
+  width: 373px;
+  height: 46px;
+  top: 546px;
+  left: 533px;
+  background-color: #999999;
+  position: absolute;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .text-wrapper {
+  top: 6px;
+  left: 16px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .overlap-group {
+  width: 373px;
+  height: 46px;
+  top: 466px;
+  left: 533px;
+  background-color: #999999;
+  position: absolute;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .text-wrapper-2 {
+  top: 7px;
+  left: 16px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .div-wrapper {
+  width: 268px;
+  height: 53px;
+  top: 856px;
+  left: 572px;
+  background-color: #999999;
+  position: absolute;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .text-wrapper-3 {
+  top: 10px;
+  left: 57px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .overlap-2 {
+  width: 268px;
+  height: 53px;
+  top: 933px;
+  left: 572px;
+  background-color: #a40404;
+  position: absolute;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.screen .text-wrapper-4 {
+  top: 10px;
+  left: 49px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .text-wrapper-5 {
+  position: absolute;
+  width: 642px;
+  top: 165px;
+  left: 398px;
+  -webkit-text-stroke: 1px #0000004c;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #868686;
+  font-size: 100px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.screen .pngwing {
+  position: absolute;
+  width: 163px;
+  height: 173px;
+  top: 17px;
+  left: 30px;
+  object-fit: cover;
+}

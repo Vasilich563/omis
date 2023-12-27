@@ -1,0 +1,136 @@
+.div {
+    padding: 20px;
+}
+
+.overlap-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.overlap-group a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: #8c8c8c;
+    border-radius: 0px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+body {
+    font-family: system-ui;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+form#exit_form {
+    display: flex;
+    justify-content: end;
+    margin-top: -50px;
+    margin-bottom: 40px;
+}
+
+button#exit {
+    background: #999999;
+    border: 1px solid;
+    padding: 10px 60px;
+    border-radius: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button#exit:hover {
+    background: #676767;
+}
+
+.overlap-group-2 {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 1rem;
+    padding-bottom: 20px;
+}
+.overlap-group-2 form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button#delete {
+    width: 60%;
+    background: #999999;
+    border: 1px solid;
+    padding: 10px 60px;
+    border-radius: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button#delete:hover {
+    background: #676767;
+}
+
+
+button#accept {
+    width: 60%;
+    background: #999999;
+    border: 1px solid;
+    padding: 10px 60px;
+    border-radius: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button#accept:hover {
+    background: #676767;
+}
+
+
+.overlap-3 {
+    background: #d9d9d9;
+    padding: 13px 20px;
+    border-radius: 10px;
+}
+
+.c {
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.p {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 27px;
+}
+
+.text-wrapper-5 {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+
+.text-wrapper-2 {
+    -webkit-text-stroke: 1px #0000004c;
+    font-family: "Inter-Regular", Helvetica;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+
+    font-weight: 400;
+    font-size: 70px;
+    text-align: center;
+    color: #868686;
+}
+
+
+
+ 

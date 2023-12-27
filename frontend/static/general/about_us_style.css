@@ -1,0 +1,75 @@
+.screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.screen .itcollaborate-IT {
+  position: absolute;
+  width: 1018px;
+  top: 372px;
+  left: 243px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .text-wrapper {
+  position: absolute;
+  width: 642px;
+  top: 165px;
+  left: 399px;
+  -webkit-text-stroke: 1px #0000004c;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #868686;
+  font-size: 100px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.screen .pngwing {
+  position: absolute;
+  width: 163px;
+  height: 173px;
+  top: 17px;
+  left: 30px;
+  object-fit: cover;
+}
+
+.screen .text-wrapper-2 {
+  position: absolute;
+  top: 947px;
+  left: 632px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .text-wrapper-3 {
+  position: absolute;
+  top: 974px;
+  left: 602px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}

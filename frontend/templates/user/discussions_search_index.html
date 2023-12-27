@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../../static/user/discussions_search_style.css" />
+    </head>
+    <body>
+        <div class="div-wrapper">
+            <div class="div">
+
+                {% if user_authorized %}
+                    <form method="POST" id="exit_form" action={{form_action_url}}>
+                        <button name="exit" id="exit" class="overlap-group">
+                            <div class="text-wrapper">Выйти</div>
+                        </button>
+                    </form>
+                {% else %}
+                    <form method="POST" id="login_form" action={{form_action_url}}>
+                        <button name="login" id="login" class="overlap-group">
+                            <div class="text-wrapper">Авторизация</div>
+                        </button>
+                    </form>
+                {% endif %}
+
+                <div class="overlap">
+                    <a href={{discussions_url}} class="overlap-2"><div class="text-wrapper-2">Обсуждения</div></a>
+                    <a href={{knowledge_url}} class="overlap-3"><div class="text-wrapper-3">Каталог знаний</div></a>
+                </div>
+                <div class="text-wrapper-4">ITCollaborate</div>
+
+                {% if user_authorized %}
+                    <a href={{add_discussion_url}} class="overlap-7">
+                        <div class="text-wrapper-8">Добавить</div>
+                    </a>
+                {% endif %}
+
+                <form method="POST" id="search_form" action={{form_action_url}}>
+                    <input type="text" name="title" id="title" class="overlap-4" placeholder="Введите заголовок обсуждения..."/>
+                    {% if categories and current_selected_category %}
+                        <select name="categories_list" id="categories_list" class="overlap-5">
+                            {% if all_categories_item == current_selected_category %}
+                                <option value="{{all_categories_item}}" SELECTED>{{all_categories_item}}</option>
+                            {% else %}
+                                <option value="{{all_categories_item}}">{{all_categories_item}}</option>
+                            {% endif %}
+                            {% for category in categories %}
+                                {% if category == current_selected_category %}
+                                    <option value="{{category}}" SELECTED>{{category}}</option>
+                                {% else %}
+                                    <option value="{{category}}">{{category}}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    {% endif %}
+                    <button name="search" id="search" class="overlap-6"><div class="text-wrapper-7">Найти</div></button>
+                </form>
+
+                {% if discussions_titles %}
+                    {% block content %}
+                        <div style="position: absolute; top: 342px; left: 22px; width: 1085px; height: auto;">
+                            {% for discussion_title in discussions_titles %}
+                                <form method="POST" id="open_discussion_form" action={{form_action_url}}>
+                                    <div style="height: 72px; padding-bottom: 31px;">
+                                        <button class="overlap-8" value="{{discussion_title}}" name="open_discussion" id="open_discussion">
+                                            <div class="item_text_wrapper">{{discussion_title}}</div>
+                                        </button>
+                                    </div>
+                                </form>
+                            {% endfor %}
+                        </div>
+                    {% endblock %}
+                {% endif %}
+
+                {% if not_found_discussion_title %}
+                    <div style="position: absolute; top: 342px; left: 22px; width: 1085px; height: auto;">
+                        <div style="height: 72px; padding-bottom: 31px;">
+                            <div class="wrong_item_text_wrapper">К сожалению статья под заголовком: "{{not_found_discussion_title}}" не обнаружена</div>
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </body>
+</html>

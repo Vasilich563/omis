@@ -1,0 +1,125 @@
+.screen {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.screen .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+}
+
+.screen .overlap {
+    position: absolute;
+    width: 268px;
+    height: 53px;
+    top: 32px;
+    left: 1152px;
+    background-color: #999999;
+    border: 1px solid #000000;
+}
+
+.screen .text-wrapper {
+    font-size: 24px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+    align-content: center;
+    text-align: center;
+}
+
+.screen .overlap-group {
+    position: absolute;
+    width: 1440px;
+    height: 87px;
+    top: 115px;
+    left: 0;
+    background-color: #d9d9d9;
+}
+
+.screen .div-wrapper {
+    position: absolute;
+    width: 720px;
+    height: 87px;
+    top: 0;
+    left: 0;
+    background-color: #d9d9d9;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-right-width: 3px;
+    border-right-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-color: #000000;
+}
+
+.screen .text-wrapper-2 {
+    top: 20px;
+    left: 257px;
+    font-size: 32px;
+    position: absolute;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .overlap-2 {
+    position: absolute;
+    width: 720px;
+    height: 87px;
+    top: 0;
+    left: 720px;
+    background-color: #d9d9d9;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-color: #000000;
+}
+
+.screen .text-wrapper-3 {
+    top: 20px;
+    left: 235px;
+    font-size: 32px;
+    position: absolute;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .text-wrapper-4 {
+    position: absolute;
+    width: 642px;
+    top: -2px;
+    left: 398px;
+    -webkit-text-stroke: 1px #0000004c;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #868686;
+    font-size: 100px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.screen .pngwing {
+    position: absolute;
+    width: 580px;
+    height: 512px;
+    top: 512px;
+    left: 407px;
+    object-fit: cover;
+}
+ 

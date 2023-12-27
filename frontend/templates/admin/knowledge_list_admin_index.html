@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../../static/admin/knowledge_list_admin_style.css" />
+    </head>
+    <body>
+        <div class="screen">
+            <div class="div">
+
+                <form method="POST" id="exit_form" action={{form_action_url}}>
+                    <button name="exit" id="exit" class="overlap-group"><div class="text-wrapper">Выйти</div></button>
+                </form>
+
+                <a href={{inspect_knowledge_url}} class="overlap">
+                    <div class="text-wrapper-2">Проверить “Каталог знаний”</div>
+                </a>
+
+                <div class="text-wrapper-3">ITCollaborate</div>
+
+                {% if knowledge_titles %}
+                    {% block content %}
+                        <div style="position: absolute; top: 250px; left: 22px; width: 1396px; height: auto;">
+                            {% if error_message %}
+                                <div style="height: 72px; padding-bottom: 31px; align-content: center; text-align: center">
+                                    <div style="font-size: 35px; font-family: 'Inter-Regular', Helvetica; font-weight: 400; color: #ff0000; letter-spacing: 0; line-height: normal;"
+                                    >{{error_message}}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% for knowledge_title in knowledge_titles %}
+                                <form method="POST" id="inspect_knowledge_form" action={{form_action_url}}>
+                                    <div style="height: 72px; padding-bottom: 31px;">
+                                        <button class="div-wrapper" value="{{knowledge_title}}" name="inspect_knowledge" id="inspect_knowledge">
+                                            <div class="p">{{knowledge_title}}</div>
+                                        </button>
+                                    </div>
+                                </form>
+                            {% endfor %}
+                        </div>
+                    {% endblock %}
+                {% else %}
+                    <div style="position: absolute; top: 250px; left: 22px; width: 1440px; height: auto; align-content: center; text-align: center">
+                        <div style="height: 72px; padding-bottom: 31px; align-content: center; text-align: center; text-align: center">
+                            <div style="font-family: 'Inter-Regular', Helvetica; font-weight: 400; color: #000000; font-size: 35px; letter-spacing: 0; line-height: normal;"
+                            >Пока что нет знаний, требующих проверку
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </body>
+</html>

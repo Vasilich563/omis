@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../../static/user/add_discussion_style.css" />
+    </head>
+    <body>
+        <div class="screen">
+            <div class="div">
+
+                <form method="POST" id="exit_form" action="{{form_action_url}}" style="">
+                    <button name="exit" id="exit" class="overlap"><div class="text-wrapper">Выйти</div></button>
+                </form>
+
+                <div class="overlap-group" style="">
+                    <a href={{discussions_url}} class="div-wrapper" style="background-color: #666666"><div class="text-wrapper-2">Обсуждения</div></a>
+                    <a href={{knowledge_url}} class="overlap-2"><div class="text-wrapper-3">Каталог знаний</div></a>
+                </div>
+
+
+                <div class="text-wrapper-4">ITCollaborate</div>
+
+                <form method="POST" id="add_discussion_form" action="{{form_action_url}}" style="">
+                    <button name="add_discussion" id="add_discussion" class="overlap-3"><div class="text-wrapper-5">Добавить</div></button>
+
+                    {% if old_description %}
+                        <textarea
+                                name="discussion_description" id="discussion_description" rows="3"
+                                placeholder="Заполните содержание обсуждения..." style="min-height: 90px" required
+                                class="overlap-5"
+                        >{{old_description}}</textarea>
+                    {% else %}
+                        <textarea
+                                name="discussion_description" id="discussion_description" rows="3"
+                                placeholder="Заполните содержание обсуждения..." style="min-height: 90px" required
+                                class="overlap-5"
+                        ></textarea>
+                    {% endif %}
+
+                    {% if old_title %}
+                        <input
+                                type="text" name="discussion_title" id="discussion_title" required
+                                placeholder="Введите заголовок обсуждения..." class="overlap-6" value="{{old_title}}"
+                        />
+                    {% else %}
+                        <input
+                                type="text" name="discussion_title" id="discussion_title" required
+                                placeholder="Введите заголовок обсуждения..." class="overlap-6"
+                        />
+                    {% endif %}
+
+                    {% if old_category %}
+                        <input
+                                type="text" name="discussion_category" id="discussion_category" required
+                                placeholder="Введите категорию, к которой относится обсуждение..." class="overlap-group-2"
+                                value="{{old_category}}"
+                        />
+                    {% else %}
+                        <input
+                                type="text" name="discussion_category" id="discussion_category" required
+                                placeholder="Введите категорию, к которой относится обсуждение..." class="overlap-group-2"
+                        />
+                    {% endif %}
+
+                </form>
+
+                {% if error_message %}
+                    <div class="error_message">
+                        {{error_message}}
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </body>
+</html>

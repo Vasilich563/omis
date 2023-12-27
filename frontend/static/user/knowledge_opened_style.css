@@ -1,0 +1,159 @@
+.overlap-group {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.overlap-group a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: #8c8c8c;
+    border-radius: 0px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+body {
+    font-family: system-ui;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+/*
+.overlap-group a:hover {
+    background: #5aa1ab;
+}*/
+
+.overlap-group a.div-wrapper {
+}
+
+.text-wrapper-4 {
+    -webkit-text-stroke: 1px #0000004c;
+    font-family: "Inter-Regular", Helvetica;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+
+    font-weight: 400;
+    font-size: 70px;
+    text-align: center;
+    color: #868686;
+}
+
+form#exit_form {
+    display: flex;
+    justify-content: end;
+    margin-top: -50px;
+    margin-bottom: 40px;
+}
+
+form#login_form {
+    display: flex;
+    justify-content: end;
+    margin-top: -50px;
+    margin-bottom: 40px;
+}
+
+.div {
+    padding: 20px;
+}
+
+button#exit {
+    background: #999999;
+    border: 1px solid;
+    padding: 10px 60px;
+    border-radius: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button#exit:hover {
+    background: #676767;
+}
+
+button#login {
+    background: #999999;
+    border: 1px solid;
+    padding: 10px 60px;
+    border-radius: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button#login:hover {
+    background: #676767;
+}
+
+.c {
+}
+
+.text-wrapper-5 {}
+
+.overlap-3 {
+    background: #d9d9d9;
+    padding: 13px 20px;
+    border-radius: 10px;
+}
+
+.text-wrapper-5 {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.p {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 27px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment-box {margin-top: 50px;}
+
+.text-wrapper-6 {
+    background: #999999;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+button#add_comment:hover {
+    background: #3a3a3a;
+}
+
+.text-wrapper-8 {font-weight: 500;font-size: 25px;}
+
+p.c-try-catch-try {
+    margin: 0;
+}
+
+.text-wrapper-9 {
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.overlap-group-2 {
+    padding: 10px;
+    border: 1px solid #211313;
+    border-radius: 6px;
+    background: #86b1dd;
+    margin-top: 10px;
+}
+
+html {
+    background: #ffffff;
+}

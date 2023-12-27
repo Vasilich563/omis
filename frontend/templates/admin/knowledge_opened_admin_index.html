@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../../static/admin/knowledge_opened_admin_style.css" />
+    </head>
+    <body>
+        <div class="screen">
+            <div class="div">
+
+                <div class="text-wrapper-2" style="">ITCollaborate</div>
+
+                <form method="POST" id="exit_form" action="{{form_action_url}}" style="">
+                    <button name="exit" id="exit" class="overlap">
+                        <div class="text-wrapper">Выйти</div>
+                    </button>
+                </form>
+
+                <div class="overlap-group" style="">
+                    <a href={{inspect_knowledge_url}} class="div-wrapper" style="background-color: #666666">
+                        <div>Проверить “Каталог знаний”</div>
+                    </a>
+                </div>
+
+                <div class="overlap-3">
+                    <div class="text-wrapper-5">Опубликовал: {{sender_username}}</div>
+                    <div class="p" style="margin-bottom: 9px;font-weight: 500;">{{knowledge_title}}</div>
+                    <div class="c">
+                        Ссылка на материал: {{knowledge_description}}
+                    </div>
+                    <a href="{{knowledge_link}}" class="p" style="/*margin-bottom: 9px;*/font-weight: 500;">Ссылка на источник источник: {{knowledge_link}}</a>
+                </div>
+
+                <div class="overlap-group-2">
+                    <form method="POST" id="accept_form" action="{{form_action_url}}" style="">
+                        <button name="accept" id="accept" class="overlap">
+                            <div class="text-wrapper">Добавить</div>
+                        </button>
+                    </form>
+
+                    <form method="POST" id="delete_form" action="{{form_action_url}}" style="">
+                        <button name="delete" id="delete" class="overlap">
+                            <div class="text-wrapper">Удалить</div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
